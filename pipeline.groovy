@@ -1,6 +1,6 @@
 pipeline {
     agent any
-
+    triggers {pollSCM('* * * * *') }
     stages {
         stage('Checkout') {
             steps {
@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat './mvnw.cmd clean'
+                bat './mvnw.cmd clean package'
             }
 
             post {

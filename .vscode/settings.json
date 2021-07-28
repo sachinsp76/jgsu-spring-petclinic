@@ -1,4 +1,4 @@
-{
+settings {
     "jenkins-runner.jobs": {
         "ide": {
             "isDefault": true,
