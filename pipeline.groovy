@@ -9,7 +9,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat './mvnw.cmd clean package'
+                bat './mvnw.cmd clean'
             }
 
             post {
